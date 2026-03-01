@@ -1,0 +1,1 @@
+cartManager is a simple UI-demo cart managing NODEJS application . It is built using nodejs,expressjs,mongodb and ejs (for serverside rendering) , it is used to add products into the user cart and can manage individual carts.
