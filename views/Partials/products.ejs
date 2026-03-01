@@ -1,0 +1,27 @@
+<div class="container my-5">
+  <div class="row g-4">
+
+    <% products.forEach(p => { %>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card h-100 shadow-sm">
+
+          <img src="<%= p.image %>" class="card-img-top mx-auto d-block"
+               style="height:200px; object-fit:cover; width: 50%;">
+
+          <div class="card-body d-flex flex-column">
+            <h5><%= p.name %></h5>
+            <p class="fw-bold">₹<%= p.price %></p>
+
+            <form action="/cart/add/<%= p.id %>" method="POST" class="mt-auto">
+              <button class="btn btn-warning w-100">
+                Add to Cart
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    <% }) %>
+
+  </div>
+</div>
